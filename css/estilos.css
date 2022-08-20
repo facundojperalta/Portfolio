@@ -165,6 +165,7 @@ body {
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
+    animation-delay: 1s;
 }
 .section .ul .li{
     margin: 0.4em 1em;
@@ -185,10 +186,12 @@ body {
     font-family: var(--tipo-titular);
     font-size: 5em;
     font-weight: 600;
+    animation-delay: .6s;
 }
 .section .h3{
     font-family: var(--tipo-titular);
     font-size: 4em;
+    animation-delay: .8s;
 }
 .section .p{
     margin: 0 0 1em;
@@ -282,7 +285,21 @@ body {
     position: relative;
     z-index: 2;
 }
-@keyframes circulo1{
+
+.animate-pop-in {
+    animation: no-transform .6s cubic-bezier(0, .9, .3, 1.2) forwards;
+    opacity: 0;
+    transform: translateY(-4rem) scale(.8);
+}
+/* Animación */
+@keyframes no-transform {
+    100% {
+        transform: none;
+        opacity: 1;
+    }
+}
+
+/*@keyframes circulo1{
     form{
         transform:rotate(0deg) scale(3);
     }
@@ -290,4 +307,4 @@ body {
         transform:rotate(360deg) scale(3);
     }
 }
-
+*/
